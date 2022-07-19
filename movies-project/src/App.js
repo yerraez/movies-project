@@ -1,4 +1,5 @@
 
+import { Create } from "./components/Create";
 import { List } from "./components/List";
 import Search from "./components/Search";
 
@@ -21,7 +22,6 @@ function App() {
           <li><a href="">Contacto</a></li>
       </ul>
   </nav>
-
   {/*Contenido principal */}
   <section className="content">
     <List />
@@ -29,14 +29,7 @@ function App() {
 {/*Barra lateral*/}
   <aside className="lateral">
     <Search />
-      <div className="add">
-          <h3 className="title">Añadir pelicula</h3>
-          <form>
-              <input type="text" aria-placeholder="Titulo"/>
-              <textarea placeholder="Descripcion"></textarea>
-              <input type="submit" value="Guardar"/>
-          </form>
-      </div>
+    <Create />
   </aside>
   {/*Pie de pagina */}
   <footer className="footer">
