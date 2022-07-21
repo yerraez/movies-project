@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { SaveStorage } from '../helpers/SaveStorage'
 
 export const  Create = () => {
 
@@ -29,38 +30,11 @@ export const  Create = () => {
         }
         //Guardar estado
         setMovieState(movie)
-        saveStorage(movie)
+        SaveStorage('movies', movie)
 
     }
 
-    const saveStorage = movie =>{
-        //Conseguir los elementos que ya tenemos en el Local Storage
 
-        let elements = JSON.parse(localStorage.getItem('movies'))
-
-        console.log(elements)
-
-        //Comprobar si es un array
-        if(Array.isArray(elements)){
-            // Añadir dentro del array un elemento nuevo
-            elements.push(movie)
-
-        }else{
-            //Crear un array con la nueva peli
-            elements = [movie]
-
-        }
-
-        //Guardar en el local storage
-
-        localStorage.setItem('movies', JSON.stringify(elements))
-
-        //Devolver un objeto guardado
-        return movie
-        
-    }
-
-    
 
   return (
     <div className="add">
