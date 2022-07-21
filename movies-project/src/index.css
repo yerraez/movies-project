@@ -167,18 +167,28 @@ input[type="button"]{
 }
 
 .lateral input[type="text"],
-.lateral textarea{
-  display: block;
-  margin: 0 auto;
-  margin-top: 15px;
-  padding: 12px;
-  border-radius: 5px;
-  background: #f6f7f9;
-  color: #454545;
-  width: 80%;
-  opacity: 4;
-  outline: 0;
-  border-color: transparent;
+.lateral input[type="text"],
+.lateral textarea,
+.edit_form input[type="text"],
+.edit_form input[type="text"],
+.edit_form textarea
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #f6f7f9;
+    color: #454545;
+    width: 80%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
+.edit_form{
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
 }
 /*Estilos para el pie de pagina*/
 .footer{
