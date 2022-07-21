@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
+//Reciviendo props
+export const List = ({listState, setListState}) => {
 
-export const List = () => {
-
-  const [listState, setListState] = useState([])
+ // const [listState, setListState] = useState([])
   
   useEffect(() => {
     console.log('Componente del listado de peliculas cargado')

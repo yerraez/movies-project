@@ -1,9 +1,12 @@
-
+import { useState } from "react";
 import { Create } from "./components/Create";
 import { List } from "./components/List";
 import Search from "./components/Search";
 
 function App() {
+
+  const [listState, setListState] = useState([])
+  
   return (
     <div className="layout">
       {/* Cabecera */}
@@ -24,12 +27,12 @@ function App() {
   </nav>
   {/*Contenido principal */}
   <section className="content">
-    <List />
+    <List listState={listState} setListState={setListState}/>
   </section>
 {/*Barra lateral*/}
   <aside className="lateral">
     <Search />
-    <Create />
+    <Create setListState={setListState}/>
   </aside>
   {/*Pie de pagina */}
   <footer className="footer">
