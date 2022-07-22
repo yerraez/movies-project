@@ -207,6 +207,7 @@ input[type="button"]{
   text-decoration: none;
 }
 
+
 @media (max-width: 1085px){
   .content{
       flex-flow: column;
@@ -218,4 +219,8 @@ input[type="button"]{
       width: 85%;
   }
 
+}
+
+.no-found{
+  color: red;
 }
