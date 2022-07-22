@@ -50,7 +50,10 @@ export const List = ({listState, setListState}) => {
         <button className="delete" onClick={() => deleteMovie(movie.id)}>Borrar</button>
         {/*aparece formulario de editar */}
         {edit === movie.id && (
-          <Edit movie={movie}/>
+          <Edit movie={movie} 
+          getMovies={getMovies}
+          setEdit={setEdit}
+          setListState={setListState}/>
         )}
         </article>
       )
